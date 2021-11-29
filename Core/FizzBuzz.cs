@@ -7,11 +7,23 @@ namespace Core
     {
         public string generate(int count)
         {
-            List<int> countList = new List<int>();
+            List<string> countList = new List<string>();
 
             for (int i = 1; i <= count; i++)
             {
-                countList.Add(i);
+                if(i % 3 == 0)
+                {
+                    countList.Add("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    countList.Add("Buzz");
+                }
+                else
+                {
+                    countList.Add(i.ToString());
+                }
+                
             }
             return string.Join(", ", countList);
         }
