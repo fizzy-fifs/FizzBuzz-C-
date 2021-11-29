@@ -11,7 +11,11 @@ namespace Core
 
             for (int i = 1; i <= count; i++)
             {
-                if(i % 3 == 0)
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    countList.Add("FizzBuzz");
+                }
+                else if(i % 3 == 0)
                 {
                     countList.Add("Fizz");
                 }
